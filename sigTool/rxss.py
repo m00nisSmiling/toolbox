@@ -36,18 +36,18 @@ XXXX     XXXX SSSSSSSS SSSSSSSS
  if url=='exit':
   os.system('python tool.py')
  else:
-  url_file=open(url).read()
-  split_url=url_file.splitlines()
-  for url_1 in split_url: 
    file1=open(inpfile).read()
    splitk=file1.splitlines()
-   for script in splitk:
-    req_txt=f"{url_1}{script}"
-    req_re=requests.get(req_txt)
-    if script in req_re.text:
-     print(colored("[ Payload is Reflected Check >>> ] Payload >>","blue"),url_1,script)
-    else:
-     print(colored("[ Not Found ]","red"))
+   for p1 in splitk: 
+    url_file=open(url).read()
+    split_url=url_file.splitlines()  
+    for url3 in split_url:
+     req_txt=f"{url3}{p1}"
+     req_re=requests.get(req_txt)
+     if p1 in req_re.text:
+      print(colored("[ Payload is Reflected Check >>> ] Payload >>","blue"),url_1,script)
+     else:
+      print(colored(f"[ NOT FOUND KEYWORDS ] {req_txt}","red"))
 
 
 rxss()
