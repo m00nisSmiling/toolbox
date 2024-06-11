@@ -45,7 +45,7 @@ XXXX     XXXX SSSSSSSS SSSSSSSS
      req_txt=f"{url3}{p1}"
      req_re=requests.get(req_txt)
      if p1 in req_re.text:
-      print(colored("[ Payload is Reflected Check >>> ] Payload >>","blue"),url_1,script)
+      print(colored("[ Payload is Reflected Check >>> ] Payload >>","blue"),url3,p1)
      else:
       print(colored(f"[ NOT FOUND KEYWORDS ] {req_txt}","red"))
 
