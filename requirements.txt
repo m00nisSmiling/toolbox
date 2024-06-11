@@ -1,5 +1,0 @@
-pyautogui
-requests
-termcolor
-keyboard
-random2
