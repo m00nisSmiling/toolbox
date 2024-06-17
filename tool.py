@@ -71,6 +71,9 @@ def fun_email():
 def fun_digger():
  os.system('python sigTool/dig.py')
 
+def fun_expdb():
+ os.system('python sigTool/exp-db.py')
+
 # game
 def fun_game1():
  #requests.get(f'https://eovzlu8cd49gpu1.m.pipedream.net/?tool=Game1:{list55}')
@@ -110,7 +113,7 @@ def fun1():
     |[005] status checker                 [017]                         |
     |[006] multi dns digger               [018]                         |
     |[007] dns record finder              [019]                         |
-    |[008] xss tester [file_input]        [020]                         |
+    |[008] xss tester [file_input]        [020] exploit-db dumper       |
     |[009] simple report writer           [021]                         |
     |[010] strong password generator      [022]                         |
     |[011] binary encoder                 [023]                         |
@@ -188,7 +191,10 @@ def fun1():
   elif inp=='system call 015':
    print(colored("                         EMAIL BOMBER MODE [ON]","blue"))
    fun_email()
-   
+  elif inp=='system call 020':
+   print(colored("                         EXPLOIT DATABASE DUMPER MODE [ON]","blue"))
+   fun_expdb()
+
 # checking log file
   elif inp=='000':
    log_file= open('log/log.txt').read()
