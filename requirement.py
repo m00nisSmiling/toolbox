@@ -1,7 +1,6 @@
 import os
 print('REQUIREMENTS ARE INSTALLING........')
 os.system('pip install pygame')
-os.system('pip install pyautogui')
 os.system('pip install dns')
 os.system('pip install keyboard')
 os.system('pip install random2')
