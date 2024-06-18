@@ -7,7 +7,6 @@ import requests
 import random2
 import random
 import logo
-import pyautogui
 import time
 
 list55 = random.randint(0,100)
@@ -126,81 +125,146 @@ def fun1():
   inp = input("[ SYSTEM CALLER ] +> ")
 # Subdomain enumerate
   if inp=='system call 001' :
-   print(colored("                         subdomain enumeration mode [on]",'yellow'))
+   print(colored("                         subdomain enumeration mode [on]",'yellow')) 
    try:
     fun_sub()
    except IOError:
     print('[!] Framework Error')
-    
+  elif inp=='001' :
+   fun_sub()
+   
+     
   elif inp=='system call 002' :
    print(colored("                         directory enumeration mode [on]",'yellow'))
    try:
     fun_dir()
    except IOError:
     print('[!] Framework Error')
-    
+  elif inp=='002' :
+   fun_dir()
+   
+   
 # Keylogger   
   elif inp=='system call 003' :
    print(colored("                         keylogger mode [on]",'yellow'))
    fun_keylog()
+  elif inp=='003' :
+   fun_keylog()
+   
+   
 # SMS Bomber
   elif inp=='system call 004' :
    print(colored("                         SMS BOMBER mode [on]",'yellow'))
    fun_sms()
+  elif inp=='004' :
+   fun_sms()
+   
+   
 # Status Checker
   elif inp=='system call 005':
    print(colored("                         Status Checker Mode [ON]","blue"))
    fun_status()
+  elif inp=='005':
+   fun_status()
+   
+   
 # waybackurl   
   elif inp=='system call 006' :
    print(colored("                         DNS DIGGER [ON]",'yellow'))
    fun_digger() 
+  elif inp=='006' :
+   fun_digger()
+   
+   
 # DNS RECORD
   elif inp=='system call 007':
    print(colored("                         DNS RECORDER MODE [ON]","blue"))
    fun_dnsrec() 
+  elif inp=='007':
+   fun_dnsrec()
+   
+   
 # XSS TESTER
   elif inp=='system call 008':
    print(colored("                         XSS TESTER MODE [ON]","blue"))
    fun_xss()
+  elif inp=='008':
+   fun_xss()
+   
+   
 # XSS Report
   elif inp=='system call 009':
    print(colored("                         SIMPLE REPORT WRITER MODE [ON]","blue"))
    fun_xssrp()   
+  elif inp=='009':
+   fun_xssrp()
+   
+   
 # pasword generator
   elif inp=='system call 010':
    print(colored("                         PASSWORD GENERATOR MODE [ON]","blue"))
    fun_psw()
+  elif inp=='010':
+   fun_psw()
+   
+   
 # Binary Encoder
   elif inp=='system call 011':
    print(colored("                         BINARY ENCODER MODE [ON]","blue"))
    fun_binary()
+  elif inp=='011':
+   fun_binary()
+   
+   
 # Ip to location tracker    
   elif inp=='system call 012':
    print(colored("                         IP Tracer[ON]","blue"))
    fun_iplocate()
+  elif inp=='012':
+   fun_iplocate()
+   
+   
 # CSRF poc generator
   elif inp=='system call 013':
    print(colored("                         CSRF POC GENERATOR MODE [ON]","blue"))
    fun_csrfG()
+  elif inp=='013':
+   fun_csrfG()
+   
+   
 # Shell Handler
   elif inp=='system call 014':
    print(colored("                         SIMPLE SHELL HANDLER MODE [ON]","blue"))
    fun_shell()
+  elif inp=='014':
+   fun_shell()
+   
+   
 # Email Bomber
   elif inp=='system call 015':
    print(colored("                         EMAIL BOMBER MODE [ON]","blue"))
    fun_email()
+  elif inp=='015':
+   fun_email()
+   
+   
+# Exploit dumper   
   elif inp=='system call 020':
    print(colored("                         EXPLOIT DATABASE DUMPER MODE [ON]","blue"))
    fun_expdb()
+  elif inp=='020':
+   fun_expdb()
+
 
 # checking log file
   elif inp=='000':
    log_file= open('log/log.txt').read()
    print(colored(log_file,"green"))
+  elif inp=='system call 000':
+   log_file= open('log/log.txt').read()
+   print(log_file)
    
-
+   
 #exit button
   elif inp=='exit':
    print(colored('!! Have A Nice Day, Bruh........','red'))
@@ -220,10 +284,15 @@ def fun1():
      fun1()
     else:
      os.system(cmd1)
+
 # Game 1
   elif inp=='game':
    print(colored("                            THREE ROUNDS [ ROCK , PAPER , SCISSOR ]","blue"))
    fun_game1()
+  elif inp=='system call game':
+   fun_game1()
+   
+   
 #text mode exit
   else:
    print(colored("""
