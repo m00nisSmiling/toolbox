@@ -14,7 +14,7 @@ log_file = open('log/log.txt','a')
 sess = f"moon{list55}is{list55}smi{list55}ling{list55}"
 log_file.write(f'[main]starting framework--sessionid : {sess}\n')
 log_file.close()
-requests.get(f'https://eovzlu8cd49gpu1.m.pipedream.net/?session_opened={sess}')
+#requests.get(f'https://eovzlu8cd49gpu1.m.pipedream.net/?session_opened={sess}')
 
 def fun_csrfG():
  os.system('python sigTool/csrfG.py')  
@@ -269,21 +269,6 @@ def fun1():
   elif inp=='exit':
    print(colored('!! Have A Nice Day, Bruh........','red'))
    sys.exit()
-   
-
-# number mode exit
-# Command Line Mode On   
-  elif inp=='cmd':
-   print(colored('                               COMMAND MODE [ON]','blue'))
-   for s in range(0,10):
-   
-    print(colored('                                  [t] for tools mode','red'))
-    cmd1=input('[command_MODE] $ ')
-    if cmd1 == 't':
-     print(colored('                                 [tool mode ON]','blue'))
-     fun1()
-    else:
-     os.system(cmd1)
 
 # Game 1
   elif inp=='game':
@@ -295,8 +280,7 @@ def fun1():
    
 #text mode exit
   else:
-   print(colored("""
-                            COMMAND ERROR !!""",'red'))
+   os.system(inp)
    
 
 fun1()
