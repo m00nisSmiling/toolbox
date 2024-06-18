@@ -10,8 +10,9 @@ PENTEST TOOLBOX FRAMEWORK
 ##### $ python toolbox.py
 --------------------------------------
 ## Usage
-##### - Just Type "system call [code name]" in system caller input
-## No need to use "system call" caller command in:
+##### - Just Type "system call [code name]" OR only type codename in System Caller Input
+
+### No need to use "system call" caller command in:
 ##### - 000 : check logs
 ##### - cmd : command mode
 ##### - t   : tool mode when command mode is [on]
