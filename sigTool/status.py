@@ -32,13 +32,27 @@ STEP2 [ on  - input a file(input wordlistname) ]
     filea = filew.splitlines()
     print('--------------------------[200 ok domains]-------------------------------')
     for file in filea:
+     log_file = open('log/log.txt','a')
+     log_file.write(f'[sub] status checker --> url {file}\n')
+     log_file.close()
      checker = f"{file}"
      try:
-      requests.get(checker)
+      ab = requests.get(checker)
      except requests.ConnectionError:
       pass
      else:
-      print("[200] ",checker)
+      ac = ab.status_code
+      if (ac<=199) :
+       ae = colored(ac,'blue')
+      elif (ac<=299) :
+       ae = colored(ac,'green')
+      elif (ac<=399) :
+       ae = colored(ac,'yellow')
+      else:
+       ae = colored(ac,'red')
+      ad = colored(ab.headers,"yellow")
+      af = colored(file,'blue')
+      print(f"[{ae}] - {af} ({ad}) ")
    else:
     os.system(inputcmd)
  elif inputw=='on':
@@ -48,15 +62,26 @@ STEP2 [ on  - input a file(input wordlistname) ]
   print('--------------------------[200 ok domains]-------------------------------')
 
   for file in filea:
+   log_file = open('log/log.txt','a')
+   log_file.write(f'[sub] status checker --> url : {file}\n')
+   log_file.close()
    checker = f"{file}"
    try:
-    requests.get(checker)
+    ab = requests.get(checker)
    except requests.ConnectionError:
     pass
    else:
-    print(checker)
- log_file = open('log/log.txt','a')
- log_file.write(f'[sub] status checker --> url file name {file11}\n')
- log_file.close()
+    ac = ab.status_code
+    if (ac<=199) :
+     ae = colored(ac,'blue')
+    elif (ac<=299) :
+     ae = colored(ac,'green')
+    elif (ac<=399) :
+     ae = colored(ac,'yellow')
+    else:
+     ae = colored(ac,'red')
+    ad = colored(ab.headers,"yellow")
+    af = colored(file,'blue')
+    print(f"[{ae}] - {af} ({ad}) ")
 
 status()
