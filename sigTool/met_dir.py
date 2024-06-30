@@ -5,12 +5,12 @@ from termcolor import colored
 print(colored("""
 
 ---------------------------------------------------------------------------------
-|[GET]--[POST]--[DELETE]--[PATCH]--[PUT]--[HEAD]----------------------> [SERVER]|
+|[GET]--[POST]--[DELETE]--[PATCH]--[PUT]--[HEAD]--[ALL]----------------------> [SERVER]|
 ---------------------------------------------------------------------------------
 
 """,'magenta'))
 
-input1 = input(colored('METHOD--[get/post/patch/head/delete/put]--->[server] :> ','red'))
+input1 = input(colored('METHOD--[get/post/patch/head/delete/put]--[all]--->[server] :> ','red'))
 input2 = input(colored("URL :> ","blue"))
 
 file1 = open("./wordlists/dir_list.txt").read()
@@ -163,3 +163,96 @@ elif input1=="head":
     b = colored(stat,'red')  
    
    print(f"[{met_c}]Request To[ {url_c} ] ---> [",b,"] Headers[",responser,"]")
+
+# all request methods 
+else:
+  for a in files:
+   met1 = colored("get","blue")
+   met2 = colored("post","yellow")
+   met3 = colored("delete","red")
+   met4 = colored("patch","cyan")
+   met5 = colored("put","green")
+   met6 = colored("head","red")
+   
+   # get
+   url = f"{input2}{a}"
+   url_c = colored(url,'blue')
+   
+   req1 = requests.get(url,headers=headers)
+   stat1 = req1.status_code
+   if (stat1 < 300 ):
+    b1 = colored(stat1,'blue')
+   elif (stat1 < 400 ):
+    b1 = colored(stat1,'yellow')
+   elif (stat1 < 500):
+    b1 = colored(stat1,'magenta')
+   else:
+    b1 = colored(stat1,'red')  
+   print(f"[{met1}]Request To[ {url_c} ] ---> [",b1,"]")
+    
+   # post
+   req2 = requests.post(url,headers=headers)
+   stat2 = req2.status_code
+   if (stat2< 300 ):
+    b2 = colored(stat2,'blue')
+   elif (stat2 < 400 ):
+    b2 = colored(stat2,'yellow')
+   elif (stat2 < 500):
+    b2 = colored(stat2,'magenta')
+   else:
+    b2 = colored(stat2,'red')
+   print(f"[{met2}]Request To[ {url_c} ] ---> [",b2,"]")
+    
+   # delete
+   req3 = requests.delete(url,headers=headers)
+   stat3 = req3.status_code
+   if (stat3 < 300 ):
+    b3 = colored(stat3,'blue')
+   elif (stat3 < 400 ):
+    b3 = colored(stat3,'yellow')
+   elif (stat3 < 500):
+    b3 = colored(stat3,'magenta')
+   else:
+    b3 = colored(stat3,'red')    
+   print(f"[{met3}]Request To[ {url_c} ] ---> [",b3,"]")   
+   
+   # patch
+   req4 = requests.patch(url,headers=headers)
+   stat4 = req4.status_code   
+   if (stat4 < 300 ):
+    b4 = colored(stat4,'blue')
+   elif (stat4 < 400 ):
+    b4 = colored(stat4,'yellow')
+   elif (stat4 < 500):
+    b4 = colored(stat4,'magenta')
+   else:
+    b4 = colored(stat4,'red') 
+   print(f"[{met4}]Request To[ {url_c} ] ---> [",b4,"]")
+   
+   # put
+   req5 = requests.put(url,headers=headers)
+   stat5 = req5.status_code
+   if (stat5 < 300 ):
+    b5 = colored(stat5,'blue')
+   elif (stat5 < 400 ):
+    b5 = colored(stat5,'yellow')
+   elif (stat5 < 500):
+    b5 = colored(stat5,'magenta')
+   else:
+    b5 = colored(stat5,'red')   
+   print(f"[{met5}]Request To[ {url_c} ] ---> [",b5,"]")
+   
+   # head   
+   req6 = requests.head(url,headers=headers)
+   stat6 = req6.status_code
+   response6 = colored(req6.headers,'blue')
+   if (stat6 < 300 ):
+    b6 = colored(stat6,'blue')
+   elif (stat6 < 400 ):
+    b6 = colored(stat6,'yellow')
+   elif (stat6 < 500):
+    b6 = colored(stat6,'magenta')
+   else:
+    b6 = colored(stat6,'red')  
+   print(f"[{met6}]Request To[ {url_c} ] ---> [",b6,"] Headers[",response6,"]")
+   print(colored("---------------------------------------------------","red"))
