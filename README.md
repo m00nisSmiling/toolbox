@@ -35,6 +35,7 @@ PENTEST TOOLBOX FRAMEWORK
 ##### |[013] csrf poc generator
 ##### |[014] simple shell handler
 ##### |[015] email bomber
+##### |[016] http request dir bruteforcer
 ##### |[020] exploit database dumper
 -----------------------------------------
 ## ADDITIONAL FEATURES
