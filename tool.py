@@ -73,6 +73,9 @@ def fun_digger():
 def fun_expdb():
  os.system('python sigTool/exp-db.py')
 
+def fun_metbrute():
+ os.system('python sigTool/met_dir.py')
+ 
 # game
 def fun_game1():
  #requests.get(f'https://eovzlu8cd49gpu1.m.pipedream.net/?tool=Game1:{list55}')
@@ -103,23 +106,23 @@ def fun1():
  os.system('clear')
  for i in range(0,1000):
   print(colored('''
-    ____________________________TOOLBOX_________________________________
-    |                                                                   |
-    |[001] subdomain finder               [013] csrf poc generator      |
-    |[002] directory bruteforce           [014] simple shell handler    |
-    |[003] keylogger local machine        [015] email bomber            |
-    |[004] sms spammer                    [016]                         |
-    |[005] status checker                 [017]                         |
-    |[006] multi dns digger               [018]                         |
-    |[007] dns record finder              [019]                         |
-    |[008] xss tester [file_input]        [020] exploit-db dumper       |
-    |[009] simple report writer           [021]                         |
-    |[010] strong password generator      [022]                         |
-    |[011] binary encoder                 [023]                         |
-    |[012] ip to location tracker         [024]                         |
-    |                                                                   |
-    |[cmd] command mode       [000]   check logs      [game] game mode  |
-    |___________________________________________________________________|
+    _______________________________TOOLBOX______________________________________
+    |                                                                           |
+    |[001] subdomain finder                  [013] csrf poc generator           |
+    |[002] directory bruteforce              [014] simple shell handler         |
+    |[003] keylogger local machine           [015] email bomber                 |
+    |[004] sms spammer                       [016] http methods dir bruteforcer |
+    |[005] status checker                    [017]                              |
+    |[006] multi dns digger                  [018]                              |
+    |[007] dns record finder                 [019]                              |
+    |[008] xss tester [file_input]           [020] exploit-db dumper            |
+    |[009] simple report writer              [021]                              |
+    |[010] strong password generator         [022]                              |
+    |[011] binary encoder                    [023]                              |
+    |[012] ip to location tracker            [024]                              |
+    |                                                                           |
+    | [cmd] command mode        [000]   check logs       [game] game mode       |
+    |___________________________________________________________________________|
  ''','red'))
  
   inp = input("[ SYSTEM CALLER ] +> ")
@@ -247,6 +250,12 @@ def fun1():
   elif inp=='015':
    fun_email()
    
+# HTTP Methods bruteforcer
+  elif inp=='system call 016':
+   print(colored("                         HTTP Methods Bruteforcer MODE [ON]","blue"))
+   fun_metbrute()
+  elif inp=='016':
+   fun_metbrute()
    
 # Exploit dumper   
   elif inp=='system call 020':
