@@ -53,8 +53,14 @@ if input1=="get":
    b = colored(stat,'magenta')
   else:
    b = colored(stat,'red')  
-
-  print(f"[{met_c}]Request To[ {url_c} ] ---> [",b,"]")
+  # file writing condition state
+  if (stat < 400 or stat > 499):
+   af = open('./wordlists/METHOD_RESULTS.txt','a')
+   ah = af.write(f"[{met_c}]To[ {url_c} ] > [{b}]\n")
+   af.close()
+  else:
+   pass
+  print(f"[{met_c}]To[ {url_c} ] > [",b,"]")
   
 # post request 
 elif input1=="post":
@@ -72,7 +78,14 @@ elif input1=="post":
    b = colored(stat,'magenta')
   else:
    b = colored(stat,'red') 
-  print(f"[{met_c}]Request To[ {url_c} ] ---> [",b,"]")
+  # file writing condition state
+  if (stat < 400 or stat > 499):
+   af = open('./wordlists/METHOD_RESULTS.txt','a')
+   ah = af.write(f"[{met_c}]To[ {url_c} ] > [{b}]\n")
+   af.close()
+  else:
+   pass
+  print(f"[{met_c}]To[ {url_c} ] > [",b,"]")
   
 # delete request
 elif input1=="delete":
@@ -89,8 +102,14 @@ elif input1=="delete":
    b = colored(stat,'magenta')
   else:
    b = colored(stat,'red')  
-
-  print(f"[{met_c}]Request To[ {url_c} ] ---> [",b,"]")
+  # file writing condition state
+  if (stat < 400 or stat > 499):
+   af = open('./wordlists/METHOD_RESULTS.txt','a')
+   ah = af.write(f"[{met_c}]To[ {url_c} ] > [{b}]\n")
+   af.close()
+  else:
+   pass
+  print(f"[{met_c}]To[ {url_c} ] > [",b,"]")
   
 # patch request
 elif input1=="patch":
@@ -107,8 +126,14 @@ elif input1=="patch":
    b = colored(stat,'magenta')
   else:
    b = colored(stat,'red')  
-
-  print(f"[{met_c}]Request To[ {url_c} ] ---> [",b,"]")
+  # file writing condition state
+  if (stat < 400 or stat > 499):
+   af = open('./wordlists/METHOD_RESULTS.txt','a')
+   ah = af.write(f"[{met_c}]To[ {url_c} ] > [{b}]\n")
+   af.close()
+  else:
+   pass
+  print(f"[{met_c}]To[ {url_c} ] > [",b,"]")
 
 # put request 
 elif input1=="put":
@@ -125,8 +150,14 @@ elif input1=="put":
    b = colored(stat,'magenta')
   else:
    b = colored(stat,'red')  
-
-  print(f"[{met_c}]Request To[ {url_c} ] ---> [",b,"]")
+  # file writing condition state
+  if (stat < 400 or stat > 499):
+   af = open('./wordlists/METHOD_RESULTS.txt','a')
+   ah = af.write(f"[{met_c}]To[ {url_c} ] > [{b}]\n")
+   af.close()
+  else:
+   pass
+  print(f"[{met_c}]To[ {url_c} ] > [",b,"]")
 
 # head request
 elif input1=="head":
@@ -145,7 +176,7 @@ elif input1=="head":
     b = colored(stat,'magenta')
    else:
     b = colored(stat,'red')  
-   print(f"[{met_c}]Request To[ {url_c} ] ---> [",b,"]")
+   print(f"[{met_c}]To[ {url_c} ] > [",b,"]")
  elif inputr == 'on':
   for a in files:
    url = f"{input2}{a}"
@@ -161,8 +192,15 @@ elif input1=="head":
     b = colored(stat,'magenta')
    else:
     b = colored(stat,'red')  
+   # file writing condition state
+   if (stat < 400 or stat > 499):
+    af = open('./wordlists/METHOD_RESULTS.txt','a')
+    ah = af.write(f"[{met_c}]To[ {url_c} ] > [{b}]\n")
+    af.close()
+   else:
+    pass
+   print(f"[{met_c}]To[ {url_c} ] > [",b,"] Headers[",responser,"]")
    
-   print(f"[{met_c}]Request To[ {url_c} ] ---> [",b,"] Headers[",responser,"]")
 
 # all request methods 
 else:
@@ -188,7 +226,13 @@ else:
     b1 = colored(stat1,'magenta')
    else:
     b1 = colored(stat1,'red')  
-   print(f"[{met1}]Request To[ {url_c} ] ---> [",b1,"]")
+   print(f"[{met1}]To[ {url_c} ] > [",b1,"]")
+   if (stat1 < 400 or stat1 > 499):
+    af = open('./wordlists/METHOD_RESULTS.txt','a')
+    ah = af.write(f"[{met1}]To[ {url} ] > [{stat1}]\n")
+    af.close()
+   else:
+    pass
     
    # post
    req2 = requests.post(url,headers=headers)
@@ -201,7 +245,13 @@ else:
     b2 = colored(stat2,'magenta')
    else:
     b2 = colored(stat2,'red')
-   print(f"[{met2}]Request To[ {url_c} ] ---> [",b2,"]")
+   print(f"[{met2}]To[ {url_c} ] > [",b2,"]")
+   if (stat2 < 400 or stat2 > 499):
+    af = open('./wordlists/METHOD_RESULTS.txt','a')
+    ah = af.write(f"[{met2}]To[ {url} ] > [{stat2}]\n")
+    af.close()
+   else:
+    pass
     
    # delete
    req3 = requests.delete(url,headers=headers)
@@ -214,7 +264,13 @@ else:
     b3 = colored(stat3,'magenta')
    else:
     b3 = colored(stat3,'red')    
-   print(f"[{met3}]Request To[ {url_c} ] ---> [",b3,"]")   
+   print(f"[{met3}]To[ {url_c} ] > [",b3,"]")   
+   if (stat3 < 400 or stat3 > 499):
+    af = open('./wordlists/METHOD_RESULTS.txt','a')
+    ah = af.write(f"[{met3}]To[ {url} ] > [{stat3}]\n")
+    af.close()
+   else:
+    pass
    
    # patch
    req4 = requests.patch(url,headers=headers)
@@ -227,7 +283,13 @@ else:
     b4 = colored(stat4,'magenta')
    else:
     b4 = colored(stat4,'red') 
-   print(f"[{met4}]Request To[ {url_c} ] ---> [",b4,"]")
+   print(f"[{met4}]To[ {url_c} ] > [",b4,"]")
+   if (stat4 < 400 or stat4 > 499):
+    af = open('./wordlists/METHOD_RESULTS.txt','a')
+    ah = af.write(f"[{met4}]To[ {url} ] > [{stat4}]\n")
+    af.close()
+   else:
+    pass
    
    # put
    req5 = requests.put(url,headers=headers)
@@ -240,8 +302,14 @@ else:
     b5 = colored(stat5,'magenta')
    else:
     b5 = colored(stat5,'red')   
-   print(f"[{met5}]Request To[ {url_c} ] ---> [",b5,"]")
-   
+   print(f"[{met5}]To[ {url_c} ] > [",b5,"]")
+   if (stat5 < 400 or stat5 > 499):
+    af = open('./wordlists/METHOD_RESULTS.txt','a')
+    ah = af.write(f"[{met5}]To[ {url} ] > [{stat5}]\n")
+    af.close()
+   else:
+    pass
+    
    # head   
    req6 = requests.head(url,headers=headers)
    stat6 = req6.status_code
@@ -254,5 +322,13 @@ else:
     b6 = colored(stat6,'magenta')
    else:
     b6 = colored(stat6,'red')  
-   print(f"[{met6}]Request To[ {url_c} ] ---> [",b6,"] Headers[",response6,"]")
+   # file writing condition state
+   if (stat6 < 400 or stat6 > 499):
+    af = open('./wordlists/METHOD_RESULTS.txt','a')
+    ah = af.write(f"[{met6}]To[ {url} ] > [{stat6}]\n")
+    af.close()
+   else:
+    pass
+    
+   print(f"[{met6}]To[ {url_c} ] > [",b6,"] Headers[",response6,"]")
    print(colored("---------------------------------------------------","red"))
