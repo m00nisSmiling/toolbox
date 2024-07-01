@@ -121,7 +121,8 @@ def fun1():
     |[011] binary encoder                    [023]                              |
     |[012] ip to location tracker            [024]                              |
     |                                                                           |
-    | [cmd] command mode        [000]   check logs       [game] game mode       |
+    | [cmd] command mode        [000] check logs         [game] game mode       |
+    |                           [111] check 016 logs                            |
     |___________________________________________________________________________|
  ''','red'))
  
@@ -273,7 +274,14 @@ def fun1():
    log_file= open('log/log.txt').read()
    print(log_file)
    
-   
+# 160 is method file reading mode
+  elif inp=='111':
+   af = open('wordlists/METHOD_RESULTS.txt').read()
+   print(af)
+  elif inp=='system call 111':
+   af = open('wordlists/METHOD_RESULTS.txt').read()
+   print(af)
+       
 #exit button
   elif inp=='exit':
    print(colored('!! Have A Nice Day, Bruh........','red'))
