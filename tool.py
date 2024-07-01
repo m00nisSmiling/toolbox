@@ -276,10 +276,10 @@ def fun1():
    
 # 160 is method file reading mode
   elif inp=='111':
-   af = open('wordlists/METHOD_RESULTS.txt').read()
+   af = open('log/METHOD_RESULTS.txt').read()
    print(af)
   elif inp=='system call 111':
-   af = open('wordlists/METHOD_RESULTS.txt').read()
+   af = open('log/METHOD_RESULTS.txt').read()
    print(af)
        
 #exit button
