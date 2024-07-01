@@ -229,7 +229,7 @@ else:
    print(f"[{met1}]To[ {url_c} ] > [",b1,"]")
    if (stat1 < 400 or stat1 > 499):
     af = open('./log/METHOD_RESULTS.txt','a')
-    ah = af.write(f"[{met1}]To[ {url} ] > [{stat1}]\n")
+    ah = af.write(f"[{met1}]To[ {url_c} ] > [{b1}]\n")
     af.close()
    else:
     pass
@@ -248,7 +248,7 @@ else:
    print(f"[{met2}]To[ {url_c} ] > [",b2,"]")
    if (stat2 < 400 or stat2 > 499):
     af = open('./log/METHOD_RESULTS.txt','a')
-    ah = af.write(f"[{met2}]To[ {url} ] > [{stat2}]\n")
+    ah = af.write(f"[{met2}]To[ {url_c} ] > [{b2}]\n")
     af.close()
    else:
     pass
@@ -267,7 +267,7 @@ else:
    print(f"[{met3}]To[ {url_c} ] > [",b3,"]")   
    if (stat3 < 400 or stat3 > 499):
     af = open('./log/METHOD_RESULTS.txt','a')
-    ah = af.write(f"[{met3}]To[ {url} ] > [{stat3}]\n")
+    ah = af.write(f"[{met3}]To[ {url_c} ] > [{b3}]\n")
     af.close()
    else:
     pass
@@ -286,7 +286,7 @@ else:
    print(f"[{met4}]To[ {url_c} ] > [",b4,"]")
    if (stat4 < 400 or stat4 > 499):
     af = open('./log/METHOD_RESULTS.txt','a')
-    ah = af.write(f"[{met4}]To[ {url} ] > [{stat4}]\n")
+    ah = af.write(f"[{met4}]To[ {url_c} ] > [{b4}]\n")
     af.close()
    else:
     pass
@@ -305,7 +305,7 @@ else:
    print(f"[{met5}]To[ {url_c} ] > [",b5,"]")
    if (stat5 < 400 or stat5 > 499):
     af = open('./log/METHOD_RESULTS.txt','a')
-    ah = af.write(f"[{met5}]To[ {url} ] > [{stat5}]\n")
+    ah = af.write(f"[{met5}]To[ {url_c} ] > [{b5}]\n")
     af.close()
    else:
     pass
@@ -325,7 +325,7 @@ else:
    # file writing condition state
    if (stat6 < 400 or stat6 > 499):
     af = open('./log/METHOD_RESULTS.txt','a')
-    ah = af.write(f"[{met6}]To[ {url} ] > [{stat6}]\n")
+    ah = af.write(f"[{met6}]To[ {url_c} ] > [{b6}]\n")
     af.close()
    else:
     pass
