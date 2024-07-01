@@ -41,6 +41,7 @@
 ## ADDITIONAL FEATURES
 
 ##### |[000]  logging system
+##### |[111]  second logging system for 016
 ##### |[cmd]  command mode
 ##### |[t]    tool mode
 ##### |[game] game mode
