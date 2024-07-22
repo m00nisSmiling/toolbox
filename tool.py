@@ -265,7 +265,7 @@ def fun1():
   elif inp=='system call 017':
    print(colored("                         FILE DESTROYER VIRUS GENERATOR MODE [ON]","blue"))
    fun_filevirus()
-  elif inp=='016':
+  elif inp=='017':
    fun_filevirus()
    
 # Exploit dumper   
