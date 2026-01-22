@@ -7,7 +7,6 @@ cd toolbox
 python requirement.py
 python toolbox.py
 ```
---------------------------------------
 
 <br>
 
@@ -21,7 +20,9 @@ python toolbox.py
 - cmd : command mode
 - t   : tool mode when command mode is [on]
 - game : game mode
----------------------------------------
+
+<br>
+
 ## DEFAULT MODULES TO SUPPORT PENTEST
 
 - [001] subdomain finder               
