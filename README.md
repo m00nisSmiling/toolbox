@@ -1,8 +1,5 @@
 <div align="center"> <h1>PENTEST TOOLBOX FRAMEWORK </h1></div>
 
---------------------------------------
-![Screenshot_2024-06-16_03_48_17](https://github.com/m00nisSmiling/toolbox/assets/122709554/d0095ead-3d15-476f-a87c-94b0b78dbb0c)
---------------------------------------
 ### Installation
 ```
 git clone https://github.com/m00nisSmiling/toolbox.git
@@ -47,3 +44,7 @@ python toolbox.py
 - [cmd]  command mode
 - [t]    tool mode
 - [game] game mode
+- 
+--------------------------------------
+![Screenshot_2024-06-16_03_48_17](https://github.com/m00nisSmiling/toolbox/assets/122709554/d0095ead-3d15-476f-a87c-94b0b78dbb0c)
+--------------------------------------
