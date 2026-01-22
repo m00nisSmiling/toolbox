@@ -1,6 +1,6 @@
 <div align="center"> <h1>PENTEST TOOLBOX FRAMEWORK </h1></div>
 
-### Installation
+- ### Installation
 ```
 git clone https://github.com/m00nisSmiling/toolbox.git
 cd toolbox
